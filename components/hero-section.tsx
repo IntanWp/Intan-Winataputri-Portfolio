@@ -10,7 +10,7 @@ export function HeroSection() {
           </h1>
           <h2 className="text-2xl md:text-3xl text-foreground mb-8">Full-Stack Engineer</h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-pretty">
-            Computer Science student passionate about building scalable web applications with the MERN stack. Ready to
+            Computer Science student passionate about building scalable applications. Ready to
             bring innovative solutions to your team.
           </p>
         </div>
