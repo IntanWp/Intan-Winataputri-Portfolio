@@ -51,7 +51,7 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">Skills & Technologies</h2>
+        <h2 className="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-foreground">Skills & Technologies</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
