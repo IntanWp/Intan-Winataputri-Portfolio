@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to use original light blue color palette */
+  --background: #ecf4ff;
+  --foreground: #161c50;
+  --card: rgba(255, 255, 255, 0.3);
+  --card-foreground: #161c50;
+  --popover: rgba(255, 255, 255, 0.9);
+  --popover-foreground: #161c50;
+  --primary: #7599ff;
+  --primary-foreground: #ffffff;
+  --secondary: #5a7cfa;
+  --secondary-foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.5);
+  --muted-foreground: #64748b;
+  --accent: #7599ff;
+  --accent-foreground: #ffffff;
+  --destructive: #e63946;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.2);
+  --input: rgba(255, 255, 255, 0.8);
+  --ring: rgba(117, 153, 255, 0.5);
+  --chart-1: #7599ff;
+  --chart-2: #5a7cfa;
+  --chart-3: #4c6ef5;
+  --chart-4: #3b5bdb;
+  --chart-5: #364fc7;
+  --radius: 0.5rem;
+  --sidebar: #ecf4ff;
+  --sidebar-foreground: #161c50;
+  --sidebar-primary: #7599ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5a7cfa;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  --sidebar-ring: rgba(117, 153, 255, 0.5);
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: rgba(30, 41, 59, 0.9);
+  --popover-foreground: #f1f5f9;
+  --primary: #7599ff;
+  --primary-foreground: #ffffff;
+  --secondary: #5a7cfa;
+  --secondary-foreground: #ffffff;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #7599ff;
+  --accent-foreground: #ffffff;
+  --destructive: #e63946;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: rgba(117, 153, 255, 0.5);
+  --chart-1: #7599ff;
+  --chart-2: #5a7cfa;
+  --chart-3: #4c6ef5;
+  --chart-4: #3b5bdb;
+  --chart-5: #364fc7;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #7599ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5a7cfa;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(117, 153, 255, 0.5);
+}
+
+@theme inline {
+  /* Updated font configuration to use Inter for all text */
+  --font-sans: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    /* Updated to use Inter font for all body text */
+    @apply text-foreground min-h-screen;
+    background-color: var(--background);
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
