@@ -35,8 +35,8 @@ export function ProjectsSection() {
       tech: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
       category: "Portfolio",
       image: "/Portfolio.png",
-      demoLink: "https://portfolio-demo.com",
-      githubLink: "https://github.com/username/portfolio",
+      demoLink: "https://intan-winataputri-portfolio.vercel.app/",
+      githubLink: "https://github.com/IntanWp/Intan-Winataputri-Portfolio",
     },
     
   ]
