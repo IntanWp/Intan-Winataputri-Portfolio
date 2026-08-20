@@ -1,0 +1,21 @@
+{
+  "buildPath": "comp",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-radius",
+        "value": "999px",
+        "createdAt": "2026-08-20T03:22:14.759Z",
+        "reason": "Circular/pill radius reserved for system-chrome and iconography only (scrollbar thumb, nav monogram dots) — the Square Corner Rule governs content surfaces (buttons, cards, images), not circular UI chrome. Author decision during finish review."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "13px",
+        "createdAt": "2026-08-20T03:23:24.311Z",
+        "reason": "Documented label micro-scale step (nav items). DESIGN.md Typography records the 11/13px label scale explicitly. Author decision during finish review."
+      }
+    ]
+  }
+}

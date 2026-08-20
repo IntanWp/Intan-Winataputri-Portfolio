@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+COMPOSABLE SYSTEMS — direction contract
+THESIS: her credentials are independently-tensioned color bands that only
+resolve into named work when they cross; the category default (icon-card
+grid on a glass-and-gradient ground) is refused.
+OWN-WORLD: sun-white ground #FAF7EF, ink #1B1730; three translucent bands —
+backend indigo #4B4A9E, leadership madder #A13E4A, shipped-work saffron
+#E9A825 — crossing under mix-blend-mode:multiply so every overlap computes
+a real, distinct color live in the browser, never a precomputed image.
+Geist Sans wide-tracked for labels, Geist Mono for credentials/data.
+STORY: a recruiter sees three bands cross once and reads the labeled
+overlaps as her actual, verifiable work — backend internship, solo-shipped
+platform, teaching — before any section header explains anything.
+FIRST VIEWPORT: name and role in the clear sun-white gap top-left; three
+diagonal bands sweep the lower field; each pairwise crossing carries its
+real credential as a label; CTA (download CV) sits inside the open gap.
+FORM: candidate 6 of the grounded direction list (Systems Drawing/Blueprint
+was assigned; user steered bolder and locked "Composable Systems," seed
+key ce30cdc8, generative-art-computational-color-chord-counterpoint).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the
+finish review, the verdict, DESIGN.md, and every shipping raster carrying
+its provenance.
+*/
+
+:root {
+  --background: #faf7ef;
+  --foreground: #1b1730;
+  --card: #ffffff;
+  --card-foreground: #1b1730;
+  --popover: #ffffff;
+  --popover-foreground: #1b1730;
+
+  --band-backend: #4b4a9e;
+  --band-backend-soft: #6f6eb8;
+  --band-leadership: #a13e4a;
+  --band-leadership-soft: #bd6c74;
+  --band-shipped: #e9a825;
+  --band-shipped-soft: #f0c168;
+  --band-shipped-ink: #8f631a;
+
+  --chord-leadership-shipped: #7a2c0b;
+
+  --primary: #4b4a9e;
+  --primary-foreground: #faf7ef;
+  --secondary: #a13e4a;
+  --secondary-foreground: #faf7ef;
+  --muted: #efe9db;
+  --muted-foreground: #5c5670;
+  --accent: #e9a825;
+  --accent-foreground: #1b1730;
+  --destructive: #a13e4a;
+  --destructive-foreground: #faf7ef;
+  --border: #e2dcc9;
+  --input: #e2dcc9;
+  --ring: #4b4a9e;
+  --radius: 0.25rem;
+
+  --sidebar: #faf7ef;
+  --sidebar-foreground: #1b1730;
+  --sidebar-primary: #4b4a9e;
+  --sidebar-primary-foreground: #faf7ef;
+  --sidebar-accent: #e9a825;
+  --sidebar-accent-foreground: #1b1730;
+  --sidebar-border: #e2dcc9;
+  --sidebar-ring: #4b4a9e;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), "Segoe UI", sans-serif;
+  --font-body: var(--font-geist-sans), "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-band-backend: var(--band-backend);
+  --color-band-backend-soft: var(--band-backend-soft);
+  --color-band-leadership: var(--band-leadership);
+  --color-band-leadership-soft: var(--band-leadership-soft);
+  --color-band-shipped: var(--band-shipped);
+  --color-band-shipped-soft: var(--band-shipped-soft);
+  --color-band-shipped-ink: var(--band-shipped-ink);
+  --color-chord-leadership-shipped: var(--chord-leadership-shipped);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 10px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-foreground min-h-screen;
+    background-color: var(--background);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--band-shipped);
+    color: var(--foreground);
+  }
+  :focus-visible {
+    outline: 2px solid var(--band-backend);
+    outline-offset: 3px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--band-backend-soft);
+    border-radius: 999px;
+    border: 2px solid var(--background);
+  }
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Composable-systems band primitives: real translucent overlap via multiply blend */
+.band-field {
+  position: relative;
+  isolation: isolate;
+}
+
+.band {
+  position: absolute;
+  mix-blend-mode: multiply;
+  will-change: transform;
+}
+
+.tag-chord {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  font-feature-settings: "tnum" 1;
+}
+
+.label-wide {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .band {
+    transition: none !important;
+    animation: none !important;
+  }
+}
