@@ -27,7 +27,7 @@ const PROJECTS = [
   {
     title: "This Portfolio",
     description:
-      "This site — designed and built from a blank redesign, not a template.",
+      "This site. Designed and built from a blank redesign, not a template.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/Portfolio.png",
     demoLink: "https://intan-winataputri-portfolio.vercel.app/",
@@ -67,9 +67,9 @@ export function ProjectsSection() {
               MOVEHAUS
             </h3>
             <p className="text-background/85 text-sm md:text-base leading-relaxed max-w-2xl mb-4 text-pretty">
-              A studio booking and management platform with role-based access —
-              admin, staff, and member each see a different system. Client
-              discovery, design, build, and shipping: all done solo.
+              A studio booking and management platform with role-based access
+              control: admin, staff, and member each see a different system.
+              Client discovery, design, build, and shipping: all done solo.
             </p>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               {["React", "Supabase", "Role-based access control"].map((tag) => (
