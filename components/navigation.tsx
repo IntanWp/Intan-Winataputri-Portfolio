@@ -38,24 +38,10 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3 group"
+            className="flex items-center group"
             aria-label="Back to top"
           >
-            <span className="band-field inline-block h-6 w-6 rounded-full bg-background">
-              <span
-                className="band rounded-full"
-                style={{ inset: "0 6px 4px 0", background: "var(--band-backend)" }}
-              />
-              <span
-                className="band rounded-full"
-                style={{ inset: "4px 0 0 6px", background: "var(--band-leadership)" }}
-              />
-              <span
-                className="band rounded-full"
-                style={{ inset: "2px 2px 2px 2px", background: "var(--band-shipped)" }}
-              />
-            </span>
-            <span className="tag-chord text-xs label-wide text-foreground/70 group-hover:text-foreground transition-colors hidden sm:inline">
+            <span className="tag-chord text-xs label-wide text-foreground/70 group-hover:text-foreground transition-colors">
               Intan Winataputri
             </span>
           </button>

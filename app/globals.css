@@ -43,7 +43,6 @@ its provenance.
   --band-shipped-soft: #f0c168;
   --band-shipped-ink: #8f631a;
 
-  --chord-leadership-shipped: #7a2c0b;
 
   --primary: #4b4a9e;
   --primary-foreground: #faf7ef;
@@ -102,7 +101,6 @@ its provenance.
   --color-band-shipped: var(--band-shipped);
   --color-band-shipped-soft: var(--band-shipped-soft);
   --color-band-shipped-ink: var(--band-shipped-ink);
-  --color-chord-leadership-shipped: var(--chord-leadership-shipped);
 
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);

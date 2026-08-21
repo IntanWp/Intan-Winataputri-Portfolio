@@ -33,14 +33,12 @@ export function ContactSection() {
       className="py-24 md:py-32 px-6 border-t border-border"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans font-medium text-3xl md:text-5xl text-foreground mb-6 text-balance max-w-2xl ml-auto text-right">
+        <h2 className="font-sans font-medium text-3xl md:text-5xl text-foreground mb-6 text-balance max-w-2xl sm:ml-auto sm:text-right">
           Open to backend roles, internships, and freelance work.
         </h2>
-        <p className="text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl mb-14 md:mb-16 text-pretty ml-auto text-right">
-          Reach out directly, or start with my CV.
-        </p>
-        <p className=" text-base md:text-lg leading-relaxed max-w-xl mb-14 mt-[-70px] text-pretty ml-auto text-right">
-          I look forward to hearing from you :)
+        <p className="text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl mb-14 md:mb-16 text-pretty sm:ml-auto sm:text-right">
+          Reach out directly, or start with my CV. I look forward to hearing
+          from you :)
         </p>
 
         <div className="sm:ml-auto sm:max-w-2xl flex flex-col gap-10">
@@ -84,7 +82,7 @@ export function ContactSection() {
         </div>
 
         <p className="tag-chord text-[11px] text-muted-foreground mt-24 pt-8 border-t border-border text-center">
-          Intan Winataputri — built solo, revised {new Date().getFullYear()}.
+          Intan Winataputri - built solo, revised {new Date().getFullYear()}.
         </p>
       </div>
     </section>

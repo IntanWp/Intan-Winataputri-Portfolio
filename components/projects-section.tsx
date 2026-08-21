@@ -19,7 +19,7 @@ const PROJECTS = [
   {
     title: "TempatHuni",
     description:
-      "Rental property listing app — browse, search, and filter, with basic auth and responsive design.",
+      "Rental property listing app: browse, search, and filter, with basic auth and responsive design.",
     tech: ["HTML", "CSS", "JavaScript"],
     image: "/TempatHuni.png",
     githubLink: "https://github.com/IntanWp/TempatHuni",
@@ -51,13 +51,20 @@ export function ProjectsSection() {
           href="https://movehaus.id"
           target="_blank"
           rel="noopener noreferrer"
-          className="group grid md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_320px] md:h-[380px] w-full mb-6 overflow-hidden"
-          style={{ background: "var(--chord-leadership-shipped)" }}
+          className="group relative isolate grid md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_320px] md:h-[380px] w-full mb-6 overflow-hidden"
         >
+          <div
+            className="absolute inset-0 -z-10"
+            style={{ background: "var(--band-leadership)" }}
+          />
+          <div
+            className="band absolute inset-0 -z-10"
+            style={{ background: "var(--band-shipped)" }}
+          />
           <div className="min-w-0 px-8 py-8 md:px-10 md:py-10 flex flex-col justify-center order-2 md:order-1">
             <div className="flex flex-wrap items-baseline justify-between gap-4 mb-4">
               <p className="tag-chord label-wide text-[11px] text-background/70">
-                Full-stack — solo, end-to-end
+                Full-stack - solo, end-to-end
               </p>
               <p className="tag-chord text-[11px] text-background/70 underline underline-offset-2">
                 movehaus.id

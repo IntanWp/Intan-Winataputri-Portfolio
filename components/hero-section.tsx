@@ -30,9 +30,19 @@ const CREDENTIALS = [
     color: "var(--band-backend)",
     dot: "var(--band-backend)",
     title: "PT Bank Sinarmas Tbk",
-    sub: "Software Engineer Intern — Spring Boot, MyBatis, MySQL",
+    sub: "Software Engineer Intern - Spring Boot, MyBatis, MySQL",
     link: undefined as { href: string; label: string } | undefined,
     align: "text-left",
+  },
+  {
+    id: "leadership-cross",
+    domain: "Leadership",
+    color: "var(--band-leadership)",
+    dot: "var(--band-leadership)",
+    title: "AIESEC in BINUS",
+    sub: "Team Leader, Quality Assurance - Outgoing Exchange",
+    link: undefined as { href: string; label: string } | undefined,
+    align: "sm:text-center",
   },
   {
     id: "shipped",
@@ -40,7 +50,7 @@ const CREDENTIALS = [
     color: "var(--band-shipped-ink)",
     dot: "var(--band-shipped)",
     title: "MOVEHAUS",
-    sub: "Solo-built, full-stack — live at ",
+    sub: "Solo-built, full-stack - live at ",
     link: { href: "https://movehaus.id", label: "movehaus.id" },
     align: "sm:text-right",
   },
@@ -65,8 +75,8 @@ export function HeroSection() {
               <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-band-shipped opacity-60" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-band-shipped" />
             </span>
-            Currently: Software Engineer Intern, PT Bank Sinarmas Tbk · Writing
-            thesis · BINUS CSSE, class of 2027
+            Currently: Software Engineer Intern, PT Bank Sinarmas Tbk - Writing
+            thesis - BINUS CSSE, class of 2027
           </div>
         </div>
 
@@ -77,7 +87,7 @@ export function HeroSection() {
         </h1>
 
         <p className="tag-chord label-wide text-sm md:text-base text-band-backend mt-6">
-          Backend Engineer — Computer Science Software Engineering, BINUS
+          Backend Engineer - Computer Science Software Engineering, BINUS
           University
         </p>
 
@@ -113,11 +123,11 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-10 md:py-12 border-b border-border">
-        <div className="grid sm:grid-cols-2 gap-8 sm:gap-16">
+        <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-16">
           {CREDENTIALS.map((cred) => (
             <div key={cred.id} className={cred.align}>
               <p
-                className="tag-chord label-wide text-[11px] mb-2 inline-flex items-center gap-2"
+                className={`tag-chord label-wide text-[11px] mb-2 inline-flex items-center gap-2 ${cred.align === "sm:text-center" ? "sm:justify-center" : ""}`}
                 style={{ color: cred.color }}
               >
                 <span
