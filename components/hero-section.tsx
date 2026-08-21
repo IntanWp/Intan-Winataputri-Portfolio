@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const BANDS = [
   {
@@ -21,7 +21,7 @@ const BANDS = [
     clip: "polygon(58% 0%, 100% 0%, 100% 100%, 68% 100%)",
     from: "translate-x-16",
   },
-]
+];
 
 const CREDENTIALS = [
   {
@@ -30,7 +30,7 @@ const CREDENTIALS = [
     color: "var(--band-backend)",
     dot: "var(--band-backend)",
     title: "PT Bank Sinarmas Tbk",
-    sub: "Backend Intern — Spring Boot, MyBatis, MySQL",
+    sub: "Software Engineer Intern — Spring Boot, MyBatis, MySQL",
     link: undefined as { href: string; label: string } | undefined,
     align: "text-left",
   },
@@ -44,15 +44,17 @@ const CREDENTIALS = [
     link: { href: "https://movehaus.id", label: "movehaus.id" },
     align: "sm:text-right",
   },
-]
+];
 
 export function HeroSection() {
-  const [settled, setSettled] = useState(false)
+  const [settled, setSettled] = useState(false);
 
   useEffect(() => {
-    const id = requestAnimationFrame(() => setTimeout(() => setSettled(true), 60))
-    return () => cancelAnimationFrame(id)
-  }, [])
+    const id = requestAnimationFrame(() =>
+      setTimeout(() => setSettled(true), 60),
+    );
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   return (
     <section id="hero" className="relative pt-28 md:pt-36">
@@ -63,7 +65,8 @@ export function HeroSection() {
               <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-band-shipped opacity-60" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-band-shipped" />
             </span>
-            Currently: Backend Intern, PT Bank Sinarmas Tbk · Writing thesis · BINUS CSSE, class of 2027
+            Currently: Software Engineer Intern, PT Bank Sinarmas Tbk · Writing
+            thesis · BINUS CSSE, class of 2027
           </div>
         </div>
 
@@ -74,7 +77,8 @@ export function HeroSection() {
         </h1>
 
         <p className="tag-chord label-wide text-sm md:text-base text-band-backend mt-6">
-          Backend Engineer — Computer Science Software Engineering, BINUS University
+          Backend Engineer — Computer Science Software Engineering, BINUS
+          University
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-9 mb-14 md:mb-16">
@@ -99,7 +103,11 @@ export function HeroSection() {
           <div
             key={band.id}
             className={`band absolute inset-0 transition-transform duration-[1400ms] ease-out ${settled ? "translate-x-0 translate-y-0" : band.from}`}
-            style={{ clipPath: band.clip, background: band.color, opacity: 0.88 }}
+            style={{
+              clipPath: band.clip,
+              background: band.color,
+              opacity: 0.88,
+            }}
           />
         ))}
       </div>
@@ -139,5 +147,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

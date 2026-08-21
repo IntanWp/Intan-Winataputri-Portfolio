@@ -37,15 +37,13 @@ export function ContactSection() {
           Open to backend roles, internships, and freelance work.
         </h2>
         <p className="text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl mb-14 md:mb-16 text-pretty ml-auto text-right">
-          Reach out directly, or start with the CV — either way, real answer, no
-          forms.
+          Reach out directly, or start with my CV.
+        </p>
+        <p className=" text-base md:text-lg leading-relaxed max-w-xl mb-14 mt-[-70px] text-pretty ml-auto text-right">
+          I look forward to hearing from you :)
         </p>
 
         <div className="sm:ml-auto sm:max-w-2xl flex flex-col gap-10">
-          {/* sm:max-w-sm below is the one knob for this row's gap: value sits left,
-              icon+label sit right, and this width is the distance between them.
-              Shrink to sm:max-w-xs for a tighter gap, or drop it (full sm:max-w-2xl)
-              for the widest spread. */}
           <div className="flex flex-col w-full sm:max-w-sm sm:ml-auto">
             {LINKS.map((link, i) => (
               <a
@@ -63,8 +61,14 @@ export function ContactSection() {
                   {link.value}
                 </span>
                 <span className="flex items-center gap-2 shrink-0">
-                  <span className="tag-chord label-wide text-xs text-muted-foreground">{link.label}</span>
-                  <link.icon className="w-4 h-4 shrink-0" style={{ color: link.color }} aria-hidden />
+                  <span className="tag-chord label-wide text-xs text-muted-foreground">
+                    {link.label}
+                  </span>
+                  <link.icon
+                    className="w-4 h-4 shrink-0"
+                    style={{ color: link.color }}
+                    aria-hidden
+                  />
                 </span>
               </a>
             ))}

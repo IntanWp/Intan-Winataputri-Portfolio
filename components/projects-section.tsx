@@ -43,7 +43,7 @@ export function ProjectsSection() {
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="font-sans font-medium text-3xl md:text-5xl text-foreground mb-14 md:mb-16 text-balance max-w-2xl">
-          Shipped work, not coursework.
+          Shipped work, not just coursework.
         </h2>
 
         {/* Flagship: MOVEHAUS */}
