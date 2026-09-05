@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Linkedin, Github } from "lucide-react";
+import { GiphySticker } from "@/components/giphy-sticker";
 
 const LINKS = [
   {
@@ -8,21 +9,18 @@ const LINKS = [
     value: "intanwp1@gmail.com",
     href: "mailto:intanwp1@gmail.com",
     icon: Mail,
-    color: "var(--band-backend)",
   },
   {
     label: "LinkedIn",
     value: "Intan Winataputri",
     href: "https://www.linkedin.com/in/intan-winataputri-38643b1a9",
     icon: Linkedin,
-    color: "var(--band-leadership)",
   },
   {
     label: "GitHub",
     value: "IntanWp",
     href: "https://github.com/IntanWp",
     icon: Github,
-    color: "var(--band-shipped-ink)",
   },
 ];
 
@@ -30,19 +28,39 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-32 px-6 border-t border-border"
+      className="ground-dusk relative py-24 md:py-36 px-6 scroll-mt-24"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans font-medium text-3xl md:text-5xl text-foreground mb-6 text-balance max-w-2xl sm:ml-auto sm:text-right">
-          Open to backend roles, internships, and freelance work.
-        </h2>
-        <p className="text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl mb-14 md:mb-16 text-pretty sm:ml-auto sm:text-right">
+      <div className="max-w-xl mx-auto relative">
+        <div className="absolute -top-8 -right-2 md:-right-8 h-20 w-20 md:h-24 md:w-24 rotate-6 rounded-md border-2 border-dashed border-white/50 flex flex-col items-center justify-center text-center px-2">
+          <p className="tag-chord label-wide text-[9px] text-white/80 leading-tight">
+            Open to
+          </p>
+          <p className="font-script text-lg text-white leading-none -mt-0.5">
+            work
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="absolute right-full top-1/2 -translate-y-1/4 mr-2 md:mr-4">
+            <GiphySticker
+              id="OhMbrxk4taZYxdF09Z"
+              title="Pingu cheering"
+              size={115}
+              rotate="-rotate-6"
+              dark
+            />
+          </div>
+          <h2 className="font-sans font-bold text-4xl md:text-5xl text-white text-balance">
+            Open to backend roles, internships, and freelance work.
+          </h2>
+        </div>
+        <p className="text-white/75 text-base leading-relaxed mt-5 mb-12 text-pretty">
           Reach out directly, or start with my CV. I look forward to hearing
-          from you :)
+          from you :D
         </p>
 
-        <div className="sm:ml-auto sm:max-w-2xl flex flex-col gap-10">
-          <div className="flex flex-col w-full sm:max-w-sm sm:ml-auto">
+        <div className="sticker-card-lg bg-white rotate-1 px-6 py-6 md:px-8 md:py-8">
+          <div className="flex flex-col">
             {LINKS.map((link, i) => (
               <a
                 key={link.label}
@@ -63,8 +81,7 @@ export function ContactSection() {
                     {link.label}
                   </span>
                   <link.icon
-                    className="w-4 h-4 shrink-0"
-                    style={{ color: link.color }}
+                    className="w-4 h-4 shrink-0 text-band-backend"
                     aria-hidden
                   />
                 </span>
@@ -75,15 +92,40 @@ export function ContactSection() {
           <a
             href="/Intan-Winataputri-CV.pdf"
             download
-            className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 text-sm label-wide tag-chord hover:bg-band-backend transition-colors self-end"
+            className="mt-6 inline-flex items-center gap-2 bg-foreground text-white rounded-md px-6 py-3 text-sm label-wide tag-chord -rotate-1 hover:rotate-0 transition-transform shadow-[3px_4px_0_rgba(36,52,74,0.2)]"
           >
             Download CV
           </a>
         </div>
 
-        <p className="tag-chord text-[11px] text-muted-foreground mt-24 pt-8 border-t border-border text-center">
-          Intan Winataputri - built solo, revised {new Date().getFullYear()}.
-        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-16">
+          <GiphySticker
+            id="LAsTE3vAlZCzGBEoMK"
+            title="Pingu hard at work"
+            size={75}
+            rotate="-rotate-6"
+            dark
+          />
+          <p className="tag-chord text-[11px] text-white/60 text-center max-w-xs">
+            Intan Winataputri - built solo, revised {new Date().getFullYear()}.{" "}
+            <span className="font-script text-sm text-white/90 normal-case tracking-normal">
+              probably trying my best to read a log right now.
+            </span>
+          </p>
+          <GiphySticker
+            id="ogVVWiyJYOcTywS8PW"
+            title="Pingu thinking it over"
+            size={72}
+            rotate="rotate-6"
+            dark
+          />
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <p className="tag-chord label-wide text-[9px] text-white/40 border border-dashed border-white/25 rounded-md px-3 py-1.5 -rotate-1">
+            {"psst, there's a cheat code hiding on this page! \u{1F47E}"}
+          </p>
+        </div>
       </div>
     </section>
   );

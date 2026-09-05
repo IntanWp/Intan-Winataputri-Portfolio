@@ -1,7 +1,7 @@
 const RECORD = [
   { label: "Major", value: "Computer Science - Software Engineering" },
   { label: "University", value: "BINUS University" },
-  { label: "GPA", value: "3.77 / 4.00", note: "semesters 1–6" },
+  { label: "GPA", value: "3.77 / 4.00", note: "semesters 1-6" },
   { label: "Graduating", value: "2027", note: "currently writing thesis" },
   {
     label: "Teaching",
@@ -18,14 +18,24 @@ export function AboutSection() {
   return (
     <section
       id="highlights"
-      className="py-24 md:py-32 px-6 border-t border-border"
+      className="ground-mint py-24 md:py-32 px-6 scroll-mt-24"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans font-medium text-3xl md:text-5xl text-foreground mb-14 md:mb-16 text-balance max-w-2xl">
-          The academic record behind it.
-        </h2>
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-start">
+        <div>
+          <h2 className="font-sans font-bold text-6xl md:text-6xl text-foreground text-balance">
+            The academic record behind it.
+          </h2>
+          <img
+            src="https://i.pinimg.com/originals/d8/41/6e/d8416e3d25fc78488d48cd8030bed953.gif"
+            alt="Snoopy reading a book in the library"
+            width={310}
+            height={200}
+            loading="lazy"
+            className="mt-8 w-[310px] h-auto -scale-x-100 -rotate-2 rounded-md drop-shadow-[3px_4px_0_rgba(36,52,74,0.15)]"
+          />
+        </div>
 
-        <dl className="max-w-3xl">
+        <dl className="bg-card soft-card px-6 md:px-8 md:-rotate-1">
           {RECORD.map((row, i) => (
             <div
               key={row.label}

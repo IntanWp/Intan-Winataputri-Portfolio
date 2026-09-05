@@ -4,75 +4,80 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-COMPOSABLE SYSTEMS — direction contract
-THESIS: her credentials are independently-tensioned color bands that only
-resolve into named work when they cross; the category default (icon-card
-grid on a glass-and-gradient ground) is refused.
-OWN-WORLD: sun-white ground #FAF7EF, ink #1B1730; three translucent bands —
-backend indigo #4B4A9E, leadership madder #A13E4A, shipped-work saffron
-#E9A825 — crossing under mix-blend-mode:multiply so every overlap computes
-a real, distinct color live in the browser, never a precomputed image.
-Geist Sans wide-tracked for labels, Geist Mono for credentials/data.
-STORY: a recruiter sees three bands cross once and reads the labeled
-overlaps as her actual, verifiable work — backend internship, solo-shipped
-platform, teaching — before any section header explains anything.
-FIRST VIEWPORT: name and role in the clear sun-white gap top-left; three
-diagonal bands sweep the lower field; each pairwise crossing carries its
-real credential as a label; CTA (download CV) sits inside the open gap.
-FORM: candidate 6 of the grounded direction list (Systems Drawing/Blueprint
-was assigned; user steered bolder and locked "Composable Systems," seed
-key ce30cdc8, generative-art-computational-color-chord-counterpoint).
-FINISH: unreviewed and undocumented is unfinished; this build ends with the
-finish review, the verdict, DESIGN.md, and every shipping raster carrying
-its provenance.
+FIELD NOTES — direction contract
+THESIS: her credentials read like real objects pinned to a desk (sticky
+notes, washi tape, a stamped postcard), not screen-native cards; the
+previous system's uniform severity (same weight, same spacing, same
+treatment section to section) stays refused, now through physical clutter
+rather than color-field variation alone.
+OWN-WORLD: warm paper ground #FAF6EE with a fine dot-grid texture, soft
+navy ink #24344A; sky blue #4F9FE0, mint #6FB88F, and coral #F0916A as tape
+and sticky-note accents, never full-bleed color fields. Every card is a
+"sticker": white or tinted paper, rounded-md corners, a hard offset shadow
+(3-4px, no blur), and a slight fixed rotation, as if cut out and stuck down
+by hand. Plus Jakarta Sans bold for display, Space Mono for data/labels,
+Caveat for short handwritten asides ("hi, it's", the footer sign-off).
+STORY: a recruiter reads the internship, the solo-shipped platform, and the
+teaching credit as verifiable fact while the page itself behaves like a
+real, slightly messy desk that a real person keeps.
+FIRST VIEWPORT: unchanged information; Timeline keeps its offset, hand-drawn
+connector; Contact closes as a stamped postcard, not a screen gradient.
+FORM: user-pinned redesign brief (portfolio-redesign-brief.md) plus a
+user-approved static mockup ("Option A: Field Notes") — no concept-seed
+tournament for this pass.
+FINISH: unreviewed and undocumented is unfinished; this build ends with
+screenshots, a self-review pass, and DESIGN.md brought back in sync.
 */
 
 :root {
-  --background: #faf7ef;
-  --foreground: #1b1730;
+  --background: #faf6ee;
+  --foreground: #24344a;
   --card: #ffffff;
-  --card-foreground: #1b1730;
+  --card-foreground: #24344a;
   --popover: #ffffff;
-  --popover-foreground: #1b1730;
+  --popover-foreground: #24344a;
 
-  --band-backend: #4b4a9e;
-  --band-backend-soft: #6f6eb8;
-  --band-leadership: #a13e4a;
-  --band-leadership-soft: #bd6c74;
-  --band-shipped: #e9a825;
-  --band-shipped-soft: #f0c168;
-  --band-shipped-ink: #8f631a;
+  --band-backend: #4f9fe0;
+  --band-backend-soft: #bcdff6;
+  --band-backend-ink: #235f8f;
+  --band-leadership: #6fb88f;
+  --band-leadership-soft: #c7e9d5;
+  --band-leadership-ink: #357256;
+  --band-shipped: #f0916a;
+  --band-shipped-soft: #f9d3bf;
+  --band-shipped-ink: #a8502a;
 
 
-  --primary: #4b4a9e;
-  --primary-foreground: #faf7ef;
-  --secondary: #a13e4a;
-  --secondary-foreground: #faf7ef;
-  --muted: #efe9db;
-  --muted-foreground: #5c5670;
-  --accent: #e9a825;
-  --accent-foreground: #1b1730;
-  --destructive: #a13e4a;
-  --destructive-foreground: #faf7ef;
-  --border: #e2dcc9;
-  --input: #e2dcc9;
-  --ring: #4b4a9e;
-  --radius: 0.25rem;
+  --primary: #4f9fe0;
+  --primary-foreground: #ffffff;
+  --secondary: #6fb88f;
+  --secondary-foreground: #ffffff;
+  --muted: #eaf3fa;
+  --muted-foreground: #5b6b80;
+  --accent: #f0916a;
+  --accent-foreground: #ffffff;
+  --destructive: #d9704f;
+  --destructive-foreground: #ffffff;
+  --border: rgba(36, 52, 74, 0.12);
+  --input: rgba(36, 52, 74, 0.12);
+  --ring: #4f9fe0;
+  --radius: 0.6rem;
 
-  --sidebar: #faf7ef;
-  --sidebar-foreground: #1b1730;
-  --sidebar-primary: #4b4a9e;
-  --sidebar-primary-foreground: #faf7ef;
-  --sidebar-accent: #e9a825;
-  --sidebar-accent-foreground: #1b1730;
-  --sidebar-border: #e2dcc9;
-  --sidebar-ring: #4b4a9e;
+  --sidebar: #faf6ee;
+  --sidebar-foreground: #24344a;
+  --sidebar-primary: #4f9fe0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0916a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #d9e7f2;
+  --sidebar-ring: #4f9fe0;
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans), "Segoe UI", sans-serif;
-  --font-body: var(--font-geist-sans), "Segoe UI", sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-sans: var(--font-jakarta), "Segoe UI", sans-serif;
+  --font-body: var(--font-jakarta), "Segoe UI", sans-serif;
+  --font-script: var(--font-caveat), cursive;
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -96,8 +101,10 @@ its provenance.
 
   --color-band-backend: var(--band-backend);
   --color-band-backend-soft: var(--band-backend-soft);
+  --color-band-backend-ink: var(--band-backend-ink);
   --color-band-leadership: var(--band-leadership);
   --color-band-leadership-soft: var(--band-leadership-soft);
+  --color-band-leadership-ink: var(--band-leadership-ink);
   --color-band-shipped: var(--band-shipped);
   --color-band-shipped-soft: var(--band-shipped-soft);
   --color-band-shipped-ink: var(--band-shipped-ink);
@@ -127,6 +134,8 @@ its provenance.
   body {
     @apply text-foreground min-h-screen;
     background-color: var(--background);
+    background-image: radial-gradient(rgba(36, 52, 74, 0.09) 1px, transparent 1px);
+    background-size: 20px 20px;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
@@ -154,7 +163,7 @@ its provenance.
   }
 }
 
-/* Composable-systems band primitives: real translucent overlap via multiply blend */
+/* Cloud-field primitives: soft translucent overlap via multiply blend */
 .band-field {
   position: relative;
   isolation: isolate;
@@ -163,6 +172,7 @@ its provenance.
 .band {
   position: absolute;
   mix-blend-mode: multiply;
+  filter: blur(28px);
   will-change: transform;
 }
 
@@ -173,8 +183,76 @@ its provenance.
 }
 
 .label-wide {
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 500;
+}
+
+/* Sticker card: a "cut paper" primitive, hard offset shadow, no blur.
+   Replaces the old soft-shadow .soft-card everywhere. */
+.soft-card,
+.sticker-card {
+  border-radius: var(--radius-md);
+  box-shadow: 3px 4px 0 rgba(36, 52, 74, 0.08);
+}
+
+.sticker-card-lg {
+  border-radius: var(--radius-lg);
+  box-shadow: 4px 5px 0 rgba(36, 52, 74, 0.09);
+}
+
+/* Section grounds: same paper base throughout (one consistent "desk"),
+   dot color tints to the section's own accent so each section still reads
+   distinctly without switching materials. */
+.ground-sky {
+  background-color: #faf6ee;
+  background-image: radial-gradient(rgba(79, 159, 224, 0.16) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+.ground-mint {
+  background-color: #faf6ee;
+  background-image: radial-gradient(rgba(111, 184, 143, 0.18) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+.ground-coral {
+  background-color: #faf6ee;
+  background-image: radial-gradient(rgba(240, 145, 106, 0.18) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+.ground-dusk {
+  background-color: #24344a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+@keyframes paw-fade {
+  from {
+    opacity: 0.55;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+@keyframes egg-pop {
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.12) rotate(-2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-3deg);
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
