@@ -40,8 +40,8 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute right-full top-1/2 -translate-y-1/4 mr-2 md:mr-4">
+        <div className="relative flex flex-col items-start gap-3 md:block md:gap-0">
+          <div className="md:absolute md:right-full md:top-1/2 md:-translate-y-1/4 md:mr-4">
             <GiphySticker
               id="OhMbrxk4taZYxdF09Z"
               title="Pingu cheering"
@@ -99,26 +99,30 @@ export function ContactSection() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-16">
-          <GiphySticker
-            id="LAsTE3vAlZCzGBEoMK"
-            title="Pingu hard at work"
-            size={75}
-            rotate="-rotate-6"
-            dark
-          />
+          <div className="hidden md:block">
+            <GiphySticker
+              id="LAsTE3vAlZCzGBEoMK"
+              title="Pingu hard at work"
+              size={75}
+              rotate="-rotate-6"
+              dark
+            />
+          </div>
           <p className="tag-chord text-[11px] text-white/60 text-center max-w-xs">
             Intan Winataputri - built solo, revised {new Date().getFullYear()}.{" "}
             <span className="font-script text-sm text-white/90 normal-case tracking-normal">
               probably trying my best to read a log right now.
             </span>
           </p>
-          <GiphySticker
-            id="ogVVWiyJYOcTywS8PW"
-            title="Pingu thinking it over"
-            size={72}
-            rotate="rotate-6"
-            dark
-          />
+          <div className="hidden md:block">
+            <GiphySticker
+              id="ogVVWiyJYOcTywS8PW"
+              title="Pingu thinking it over"
+              size={72}
+              rotate="rotate-6"
+              dark
+            />
+          </div>
         </div>
 
         <div className="flex justify-center mt-8">

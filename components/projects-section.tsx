@@ -44,7 +44,7 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-8 lg:gap-10 items-start mb-10 md:mb-12">
           <div>
-            <h2 className="font-sans font-bold text-12xl md:text-7xl text-foreground text-balance">
+            <h2 className="font-sans font-bold text-4xl md:text-7xl text-foreground text-balance">
               Shipped work, not just coursework.
             </h2>
           </div>

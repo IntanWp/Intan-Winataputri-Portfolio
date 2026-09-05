@@ -22,7 +22,7 @@ export function AboutSection() {
     >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-start">
         <div>
-          <h2 className="font-sans font-bold text-6xl md:text-6xl text-foreground text-balance">
+          <h2 className="font-sans font-bold text-4xl md:text-6xl text-foreground text-balance">
             The academic record behind it.
           </h2>
           <img
@@ -31,7 +31,7 @@ export function AboutSection() {
             width={310}
             height={200}
             loading="lazy"
-            className="mt-8 w-[310px] h-auto -scale-x-100 -rotate-2 rounded-md drop-shadow-[3px_4px_0_rgba(36,52,74,0.15)]"
+            className="mt-8 w-[220px] md:w-[310px] h-auto -scale-x-100 -rotate-2 rounded-md drop-shadow-[3px_4px_0_rgba(36,52,74,0.15)]"
           />
         </div>
 

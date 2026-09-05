@@ -140,16 +140,16 @@ export function TimelineSection() {
       className="py-24 md:py-32 px-6 overflow-hidden scroll-mt-24"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="relative">
+        <div className="relative flex flex-col items-start md:block">
           <img
             src="https://media.giphy.com/media/4bz6frJ6gNlCUEExIu/giphy.gif"
             alt="Snoopy dancing happily"
             width={100}
             height={100}
-            className="absolute -top-11 md:-top-18 left-1 md:left-110 z-10 -rotate-6 object-contain drop-shadow-[2px_3px_2px_rgba(36,52,74,0.15)]"
+            className="mt-6 -mb-5 md:mt-0 md:mb-0 md:absolute md:-top-18 md:left-110 z-10 -rotate-6 object-contain drop-shadow-[2px_3px_2px_rgba(36,52,74,0.15)]"
             style={{ width: 100, height: 100 }}
           />
-          <h2 className="font-sans font-bold text-3xl md:text-5xl text-foreground mb-4 text-balance max-w-2xl">
+          <h2 className="font-sans font-bold text-4xl md:text-5xl text-foreground mb-4 text-balance max-w-2xl">
             How this actually happened.
           </h2>
         </div>
@@ -163,7 +163,7 @@ export function TimelineSection() {
         <div className="relative md:-rotate-[0.4deg]">
           <svg
             aria-hidden
-            className="absolute left-[8px] md:left-1/2 top-0 h-full w-6 md:-translate-x-1/2 hidden sm:block"
+            className="absolute left-[8px] md:left-1/2 top-0 h-full w-6 md:-translate-x-1/2"
             viewBox="0 0 24 100"
             preserveAspectRatio="none"
           >
