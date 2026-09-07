@@ -25,8 +25,7 @@ const caveat = Caveat({
 export const metadata = {
   title: "Intan Winataputri — Backend Engineer",
   description:
-    "Backend-focused software engineer (Spring Boot, MyBatis, MySQL) at PT Bank Sinarmas Tbk. Computer Science, BINUS University. Portfolio, projects, and CV.",
-  generator: "v0.app",
+    "Backend-focused software engineer (Spring Boot, MyBatis, MySQL) at PT Bank Sinarmas Tbk. Computer Science, BINUS University. Portfolio, projects, and CV."
 };
 
 export default function RootLayout({
